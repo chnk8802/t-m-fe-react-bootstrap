@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,15 +13,21 @@ code {
     monospace;
 }
 
+* {
+  /* border: 1px solid red; */
+}
+
 #list-item-delete:hover {
   background: rgb(255, 242, 242);
-  color: #d9534f!important;
+  color: #d9534f !important;
 }
+
 #list-item-delete.active {
-  background:#d9534f!important;
+  background: #d9534f !important;
   border-color: #d9534f;
-  color: #fff!important;
+  color: #fff !important;
 }
-/* #taskcard *{
-  border: 1px solid #d9534f;
-} */
+
+.table>:not(caption)>*>* {
+  border: none;
+}

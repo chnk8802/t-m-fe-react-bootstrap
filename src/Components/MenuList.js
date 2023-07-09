@@ -1,21 +1,27 @@
+import { useState } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 function MenuList() {
+  const [activeKey, setActiveKey] = useState(false);
+  const handleClick = () => {
+    setActiveKey(true);
+  }
+
   return (
-    <ListGroup id="menu-list-group" className="rounded-0 pt-5" defaultActiveKey="./all-tasks">
-      <ListGroup.Item action href="./all-tasks">
+    <ListGroup id="menu-list-group" className="rounded-0 pt-5">
+      <ListGroup.Item activeKey={activeKey ? "active" : ""} action href="./all-tasks" onClick={handleClick}>
         All Tasks
       </ListGroup.Item>
-      <ListGroup.Item action href="#link2" >
+      <ListGroup.Item activeKey={activeKey ? "active" : ""} action href="./profile" onClick={handleClick}>
         Your Profile
       </ListGroup.Item>
-      <ListGroup.Item action href="#link3" >
+      <ListGroup.Item activeKey={activeKey ? "active" : ""} action href="#logout" onClick={handleClick}>
         Logout
       </ListGroup.Item>
-      <ListGroup.Item action href="#link4" >
-      Logout All Sessions
+      <ListGroup.Item activeKey={activeKey ? "active" : ""} action href="#logout-all" onClick={handleClick}>
+        Logout All Sessions
       </ListGroup.Item>
-      <ListGroup.Item className='text-danger' id="list-item-delete" action href="#link5" >
+      <ListGroup.Item activeKey={activeKey ? "active" : ""} className='text-danger' id="list-item-delete" action href="#delete" onClick={handleClick}>
         Delete Profile
       </ListGroup.Item>
     </ListGroup>

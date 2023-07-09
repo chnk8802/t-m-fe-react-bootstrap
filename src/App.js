@@ -1,27 +1,24 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import Signup from './Pages/Signup';
-import Login from './Pages/Login';
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Home from "./Pages/Home";
+import Userpanel from "./Pages/Userpanel";
+import Login from "./Pages/Login"
+import Signup from "./Pages/Signup"
+import Userprofile from "./Pages/Userprofile";
 
 function App() {
-  /* To be changed according to when the error is occuring */
-  const [isError, setIsError] = useState(true);
-  const handleError = () => {
-    setIsError(!isError);
-  }
-  useEffect(() => {
-    if (isError === true) {
-      const interval = setTimeout(() =>{
-        setIsError(false);
-      },3000);
-      return () => clearInterval(interval);
-    }
-  },[isError])
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const toggleShow = () => setShow((s) => !s);
   return (
     <Router>
       <Routes>
-        <Route path='/signup' Component={Signup}/><Link></Link>
-        <Route path='/login' Component={Login}/>
+        <Route path="/" Component={Home}></Route>
+        <Route path="/all-tasks" element={<Userpanel show={show} handleClose={handleClose} toggleShow={toggleShow} imageSource={"https://www.cartonionline.com/wordpress/wp-content/uploads/2023/02/goku.jpg"} />}></Route>
+        <Route path="/signup" Component={Signup}></Route>
+        <Route path="/login" Component={Login}></Route>
+        <Route path="/profile" element={<Userprofile show={show} handleClose={handleClose} toggleShow={toggleShow} imageSource={"https://www.cartonionline.com/wordpress/wp-content/uploads/2023/02/goku.jpg"} />}></Route>
       </Routes>
     </Router>
   );

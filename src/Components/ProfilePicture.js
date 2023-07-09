@@ -1,10 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 
-function ProfilePicture({imageDimension}) {
+function ProfilePicture({ imageDimension, imageSource, thumbnail }) {
   return (
     <Container className="p-0">
-          <Image src="https://assets1.ignimgs.com/2020/01/23/forge-1579809968738.jpg" roundedCircle style={imageDimension} />
+      <Image src={imageSource} roundedCircle style={imageDimension} thumbnail={thumbnail ? true : false} />
     </Container>
   );
 }
