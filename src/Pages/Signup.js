@@ -57,7 +57,7 @@ function Signup() {
 
   return (
     <div className='d-flex flex-column align-items-between vh-100'>
-        <Header />
+      <Header />
       <div className='d-flex justify-content-center align-items-center flex-grow-1'>
         <Form className="p-5 border rounded" noValidate onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formGroupName-su">
@@ -66,15 +66,15 @@ function Signup() {
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupEmail-su">
             <Form.Label>Email address</Form.Label>
-            <Form.Control required type="email" name='email' placeholder="Enter email" value={formData.email} onChange={handleChange}/>
+            <Form.Control required type="email" name='email' placeholder="Enter email" value={formData.email} onChange={handleChange} />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupAge-su">
             <Form.Label>Age</Form.Label>
-            <Form.Control required type="number" name='age' placeholder="Enter Age" value={formData.age} onChange={handleChange}/>
+            <Form.Control required type="number" name='age' placeholder="Enter Age" value={formData.age} onChange={handleChange} />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupPassword-su">
             <Form.Label>Password</Form.Label>
-            <Form.Control required type="password" name='password' placeholder="Password" value={formData.password} onChange={handleChange}/>
+            <Form.Control required type="password" name='password' placeholder="Password" value={formData.password} onChange={handleChange} />
           </Form.Group>
           {responseMessage && (
             <div className={isError ? 'text-danger py-2' : 'text-success d-flex gap-3 py-2'}>
@@ -89,7 +89,7 @@ function Signup() {
             <b><a href="./login" className="text-decoration-none">Login</a></b>
           </div>
         </Form>
-        </div>
+      </div>
       <Footer />
     </div>
   );
