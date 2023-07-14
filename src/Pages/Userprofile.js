@@ -8,17 +8,17 @@ import Footer from '../Components/Footer'
 
 function Userprofile(props) {
     return (
-        <div className='d-flex flex-column vh-100'>
+        <div className=''>
             <Header {...props} />
-            <div className='d-flex flex-column justify-content-center align-items-center flex-grow-1'>
-                <div className='d-flex flex-row justify-content-center align-items-center w-50 row'>
+            <div className='px-3 px-sm-5'>
+                <div className='mt-5'>
                     <ProfilePicture imageDimension={{ width: "10rem", height: "10rem" }} imageSource={"https://www.cartonionline.com/wordpress/wp-content/uploads/2023/02/goku.jpg"} thumbnail={true} />
-                    <div className='d-flex flex-column w-100 col'>
-                        <span className='fs-1 fw-bold w-100'>{"Mark Son Goku"}</span>
+                    <div className='d-flex flex-column'>
+                        <span className='fs-1 fw-bold'>{"Mark Son Goku"}</span>
                         <span className=''>{"example@email.com"}</span>
                     </div>
                 </div>
-                <div className='py-5 w-50'>
+                <div className='py-5'>
                     <Form>
                         <Form.Group controlId="formFile" className="mb-3">
                             <Form.Label>Upload New Profile Picture</Form.Label>
@@ -26,7 +26,7 @@ function Userprofile(props) {
                         </Form.Group>
                     </Form>
                 </div>
-                <div className='w-50'>
+                <div className=''>
                     <Table >
                         <tbody>
                             <tr>

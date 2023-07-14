@@ -1,9 +1,7 @@
 function Footer() {
     return (
-        <div className="py-5 bg-body-tertiary row border-0">
-            <div className="col"></div>
-            <span className="col text-center">❤️ from Naveen Kumar</span>
-            <div className="col"></div>
+        <div className="d-flex justify-content-center py-5 py-sm-4 bg-body-tertiary mt-5">
+                <span>❤️ from Naveen Kumar</span>
         </div>
     );
 }

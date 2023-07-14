@@ -9,19 +9,22 @@ function MenuList() {
 
   return (
     <ListGroup id="menu-list-group" className="rounded-0 pt-5">
-      <ListGroup.Item activeKey={activeKey ? "active" : ""} action href="./all-tasks" onClick={handleClick}>
+      <ListGroup.Item activekey={activeKey ? "active" : ""} action href="./all-tasks" onClick={handleClick}>
         All Tasks
       </ListGroup.Item>
-      <ListGroup.Item activeKey={activeKey ? "active" : ""} action href="./profile" onClick={handleClick}>
+      <ListGroup.Item activekey={activeKey ? "active" : ""} action href="./profile" onClick={handleClick}>
         Your Profile
       </ListGroup.Item>
-      <ListGroup.Item activeKey={activeKey ? "active" : ""} action href="#logout" onClick={handleClick}>
+      <ListGroup.Item activekey={activeKey ? "active" : ""} action href="./about" onClick={handleClick}>
+        About
+      </ListGroup.Item>
+      <ListGroup.Item activekey={activeKey ? "active" : ""} action href="#logout" onClick={handleClick}>
         Logout
       </ListGroup.Item>
-      <ListGroup.Item activeKey={activeKey ? "active" : ""} action href="#logout-all" onClick={handleClick}>
+      <ListGroup.Item activekey={activeKey ? "active" : ""} action href="#logout-all" onClick={handleClick}>
         Logout All Sessions
       </ListGroup.Item>
-      <ListGroup.Item activeKey={activeKey ? "active" : ""} className='text-danger' id="list-item-delete" action href="#delete" onClick={handleClick}>
+      <ListGroup.Item activekey={activeKey ? "active" : ""} className='text-danger' id="list-item-delete" action href="#delete" onClick={handleClick}>
         Delete Profile
       </ListGroup.Item>
     </ListGroup>
